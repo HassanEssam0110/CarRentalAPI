@@ -7,7 +7,7 @@ const router = Router();
 
 router.put('/rental-state', changeStateCarValidator, changeRentalState)
 router.get('/rented-or-model', verifyToken, getRentedOrSpecificModelCars);
-router.get('/available-or-rented/:model', verifyToken, getavailableOrRentedModelCars)
+router.get('/available-or-rented', verifyToken, getavailableOrRentedModelCars)
 router.route('/')
     .get(verifyToken, filterQuery, getAllCars)
     .post(verifyToken, createCarValidator, addCar)
